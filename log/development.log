@@ -734,3 +734,152 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-15 23:20:01 +0200
 Served asset /users.js - 304 Not Modified (0ms)
+  [1m[36m (33.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  SHOW search_path
+  [1m[36m (3.9ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'schema_migrations'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+  [1m[35m (3.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to SorceryCore (20110915205652)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (34.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying(255) NOT NULL, "email" character varying(255), "crypted_password" character varying(255), "salt" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (26.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110915205652')
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+Migrating to SorceryRememberMe (20110915205653)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (6.6ms)[0m  [1mALTER TABLE "users" ADD COLUMN "remember_me_token" character varying(255) DEFAULT NULL[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD COLUMN "remember_me_token_expires_at" timestamp DEFAULT NULL
+  [1m[36m (1.5ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'users'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+  [1m[35m (1.8ms)[0m  CREATE INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110915205653')[0m
+  [1m[35m (28.4ms)[0m  COMMIT
+Migrating to DropUsername (20110915211607)
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" DROP "username"
+  [1m[36m (7.2ms)[0m  [1mALTER TABLE "users" ALTER COLUMN "email" TYPE character varying(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ALTER "email" SET NOT NULL
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110915211607')[0m
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SHOW search_path
+  [1m[36m (2.3ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'users'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+  [1m[35mColumns for index index_users_on_remember_me_token on users (0.3ms)[0m   SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 34180
+ AND a.attnum IN (8)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 107ms (Views: 106.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /application.css - 200 OK (43ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /sessions.css - 200 OK (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /users.css - 200 OK (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /jquery.js - 200 OK (31ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /jquery_ujs.js - 200 OK (10ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /sessions.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /users.js - 200 OK (1ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-09-23 22:26:54 +0200
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-23 22:27:03 +0200
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ownWo/NGC489rrqza/04eelHzhSgOC6OcI7+5V05dSU=", "user"=>{"email"=>"thomas.flemming@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.4ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = 'thomas.flemming@gmail.com' LIMIT 1
+  [1m[36mSQL (53.4ms)[0m  [1mINSERT INTO "users" ("created_at", "crypted_password", "email", "remember_me_token", "remember_me_token_expires_at", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Fri, 23 Sep 2011 20:27:03 UTC +00:00], ["crypted_password", "$2a$10$Ojbc5fYM24MtCo1SecQLEOTbKFNm3odxE/F1yIkh6DKtkkiJMjWoa"], ["email", "thomas.flemming@gmail.com"], ["remember_me_token", nil], ["remember_me_token_expires_at", nil], ["salt", "9e8389c55e47f47e8bd2b9a1e3b1ff241b89974e"], ["updated_at", Fri, 23 Sep 2011 20:27:03 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 299ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-23 22:27:03 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-09-23 22:27:06 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-09-23 22:27:16 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ownWo/NGC489rrqza/04eelHzhSgOC6OcI7+5V05dSU=", "email"=>"thomas.flemming@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1", "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email = 'thomas.flemming@gmail.com') LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 210ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-23 22:27:16 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 19.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/secret" for 127.0.0.1 at 2011-09-23 22:27:18 +0200
+  Processing by HomeController#secret as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered home/secret.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 14.0ms | ActiveRecord: 4.2ms)

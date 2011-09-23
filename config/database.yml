@@ -6,9 +6,9 @@
 
 development:
   adapter: postgresql
-  database: pomodoro
-  username: pomodoro
-  password: eu99vett
+  database: never_get_towed
+  username: never_get_towed
+  password: never4ever
 
 # development:
 #  adapter: sqlite3
