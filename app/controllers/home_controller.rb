@@ -7,4 +7,16 @@ class HomeController < LandingController
   def secret
   end
 
+  def hold_meg_informert
+    if(PotentialCustomer.find_by_email(params[:email_input]))
+      flash[:notice] = "Takk, vi har registrert din interesse!"
+    else
+      @potentialCustomer = PotentialCustomer.new(:email => params[:email_input])
+      if @potentialCustomer.save
+        flash[:notice] = "Takk for din interesse!"
+      end
+    end
+    render :index
+  end
+
 end

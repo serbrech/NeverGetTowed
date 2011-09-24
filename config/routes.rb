@@ -68,6 +68,8 @@ Socialtomatoes::Application.routes.draw do
   resources :users
   resources :sessions
 
+  post 'hold_meg_informert' => "home#hold_meg_informert"
+
   get "secret" => "home#secret", :as => "secret"
   root :to => "home#index"
 end
