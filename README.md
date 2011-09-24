@@ -1,5 +1,7 @@
-# Rails 3.1 template
+# Never get towed
 
-Very simple rails 3.1 template. Uses the sorcery gem for authentication
-and  It only uses the sorcery gem for
-authentication.
+Source for the site http://never-get-towed.heroku.com.
+
+# Technical
+The basis is Rails 3.1 template. It uses the sorcery gem for authentication.
+
