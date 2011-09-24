@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Never Get Towed!</title>
-  <%= stylesheet_link_tag "landing" %>
+  <%= stylesheet_link_tag  "landing" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <script type="text/javascript" charset="utf-8">
@@ -40,6 +40,10 @@
   <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
   <% end %>
+  <% if flash[:sorry] %>
+    <div class="sorry"><%= flash[:sorry] %></div>
+  <% end %>
+
 
 <%= yield %>
 

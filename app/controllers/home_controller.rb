@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class HomeController < LandingController
   before_filter :require_login, :only => :secret
 
@@ -14,6 +15,8 @@ class HomeController < LandingController
       @potentialCustomer = PotentialCustomer.new(:email => params[:email_input])
       if @potentialCustomer.save
         flash[:notice] = "Takk for din interesse!"
+      else
+        flash[:sorry] = "Noe ser ut til å være feil med epostadressen. Vennligst prøv igjen."
       end
     end
     render :index
