@@ -1,7 +1,11 @@
-<h1>Admin page</h1>
+<h1>Admininistration</h1>
 
-<%= form_for :potential_customers do |f| %>
-  E-post:
-  <%= f.text_field :email %><br />
-  <%= f.submit 'Ja, gi meg beskjed'%>
-<% end %>
+<p>Totalt <%=@potential_customers.size.to_s %> har meldt sin interesse.</p>
+
+<p>
+   <ul>
+   <% @potential_customers.each do |customer| %>
+      <li><%= customer.email %> <%= customer.created_at %></li>
+   <% end %>
+   </ul>
+</p>
