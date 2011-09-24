@@ -5,7 +5,7 @@ NGT = new Ext.Application({
 	icon: 'resources/images/icon.png',
     glossOnIcon: true,
 	launch: function(){
-		this.viewport = new NGT.views.viewport({
+		this.viewport = new NGT.views.mapview({
 			application: this
 		});
 	}

@@ -14,7 +14,53 @@ body {
         background: url("/assets/background.png") repeat;
 }
 
+#content {
+	background: #FFF;
+	width: 50%;
+	margin: auto 50% auto 0;
+	z-index: 10;
+	float: left;
+}
+
+#top {
+	width: 100%;
+}
+
+#top_right {
+	float: right;
+	width: 40%;
+	margin: 100px 80px 0 0;
+	clear: none;
+	font-size: 18pt;
+	text-shadow: #FFF 1px 1px 0;
+}
+
 #name {
+<<<<<<< HEAD
+	font-size: 50pt;
+	margin: 30px;
+	float: left;
+}
+
+#logo {
+	float: left;
+	clear: left;
+}
+
+#email {
+	text-align: center;
+	background-color: #FFF;
+	clear: both;
+	width: 100%;
+	height: 100px;
+	clear: both;
+}
+
+#email p {
+	float: left;
+	font-size: 24pt;
+}
+=======
         font-size: 72pt;
         position: absolute;
         top: 30px;
@@ -64,7 +110,16 @@ body {
         font-size: 18pt;
         margin: 10px;
         width: 80%;
+>>>>>>> ea5afdf3f6c990962a892309255695c3250c39ce
 
+#email input {
+	float: left;
+	height: 24pt;
+	font-size: 24pt;
+}
+
+#email_input {
+	line-height: 24pt;
 }
 
 #social {
@@ -73,9 +128,18 @@ body {
 }
 
 #brown {
+<<<<<<< HEAD
+	background: url("/assets/background-gray.png");
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+=======
         background: url("/assets/background-brown.png");
         width: 100%;
         height: 200px;
         bottom: 0;
         position: absolute;
+>>>>>>> ea5afdf3f6c990962a892309255695c3250c39ce
 }
