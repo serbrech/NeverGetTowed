@@ -1,0 +1,885 @@
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  SHOW search_path
+  [1m[36m (3.3ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'schema_migrations'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+  [1m[35m (2.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to SorceryCore (20110915205652)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying(255) NOT NULL, "email" character varying(255), "crypted_password" character varying(255), "salt" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110915205652')
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Migrating to SorceryRememberMe (20110915205653)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (6.2ms)[0m  [1mALTER TABLE "users" ADD COLUMN "remember_me_token" character varying(255) DEFAULT NULL[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "users" ADD COLUMN "remember_me_token_expires_at" timestamp DEFAULT NULL
+  [1m[36m (1.5ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'users'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+  [1m[35m (1.4ms)[0m  CREATE INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110915205653')[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SHOW search_path
+  [1m[36m (2.3ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'users'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+  [1m[35mColumns for index index_users_on_remember_me_token on users (0.3ms)[0m   SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 26010
+ AND a.attnum IN (8)
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to SorceryCore (20110915205652)
+Migrating to SorceryRememberMe (20110915205653)
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mSHOW search_path[0m
+  [1m[35m (2.2ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'users'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+  [1m[36mColumns for index index_users_on_remember_me_token on users (0.3ms)[0m  [1m SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 26010
+ AND a.attnum IN (8)
+[0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2011-09-15 23:04:29 +0200
+Served asset /rails.png - 304 Not Modified (6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-15 23:04:48 +0200
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-15 23:06:23 +0200
+
+LoadError (Expected /Users/thomasfl/workspace/socialtomatoes/app/controllers/home_controller.rb to define HomeController):
+  
+
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.3ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-15 23:06:37 +0200
+  Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 72ms
+
+ActionView::MissingTemplate (Missing template home/index, application/index with {:handlers=>[:erb, :builder, :coffee], :formats=>[:html], :locale=>[:en, :en]}. Searched in:
+  * "/Users/thomasfl/workspace/socialtomatoes/app/views"
+):
+  
+
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-15 23:07:57 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (10.6ms)
+Compiled application.css  (1ms)  (pid 3202)
+Compiled sessions.css  (60ms)  (pid 3202)
+Compiled users.css  (1ms)  (pid 3202)
+Compiled application.js  (3ms)  (pid 3202)
+Compiled jquery.js  (18ms)  (pid 3202)
+Compiled jquery_ujs.js  (27ms)  (pid 3202)
+Compiled sessions.js  (335ms)  (pid 3202)
+Compiled users.js  (127ms)  (pid 3202)
+Completed 200 OK in 672ms (Views: 671.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-15 23:07:58 +0200
+Served asset /application.css - 200 OK (10ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-15 23:07:58 +0200
+Served asset /users.css - 200 OK (7ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-15 23:07:58 +0200
+Served asset /sessions.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-15 23:07:58 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-15 23:07:58 +0200
+Served asset /sessions.js - 200 OK (23ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-15 23:07:58 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-15 23:07:58 +0200
+Served asset /users.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-15 23:07:58 +0200
+Served asset /application.js - 200 OK (6ms)
+
+
+Started GET "/secret" for 127.0.0.1 at 2011-09-15 23:08:04 +0200
+  Processing by HomeController#secret as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-09-15 23:08:04 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-15 23:08:04 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-15 23:08:04 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-09-15 23:09:20 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (require_self can only be called once per source file
+  (in /Users/thomasfl/workspace/socialtomatoes/app/assets/stylesheets/application.css:13)):
+    2: <html>
+    3: <head>
+    4:   <title>Socialtomatoes</title>
+    5:   <%= stylesheet_link_tag    "application" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___191477136890161289_2161628100'
+
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-09-15 23:10:24 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (require_self can only be called once per source file
+  (in /Users/thomasfl/workspace/socialtomatoes/app/assets/stylesheets/application.css:13)):
+    2: <html>
+    3: <head>
+    4:   <title>Socialtomatoes</title>
+    5:   <%= stylesheet_link_tag    "application" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___191477136890161289_2161628100'
+
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-09-15 23:11:42 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 41ms
+
+ActionView::Template::Error (require_self can only be called once per source file
+  (in /Users/thomasfl/workspace/socialtomatoes/app/assets/stylesheets/application.css:13)):
+    2: <html>
+    3: <head>
+    4:   <title>Socialtomatoes</title>
+    5:   <%= stylesheet_link_tag    "application" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___191477136890161289_2161628100'
+
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-09-15 23:11:43 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (require_self can only be called once per source file
+  (in /Users/thomasfl/workspace/socialtomatoes/app/assets/stylesheets/application.css:13)):
+    2: <html>
+    3: <head>
+    4:   <title>Socialtomatoes</title>
+    5:   <%= stylesheet_link_tag    "application" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___191477136890161289_2161628100'
+
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-09-15 23:11:57 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 70ms
+
+ActionView::Template::Error (require_self can only be called once per source file
+  (in /Users/thomasfl/workspace/socialtomatoes/app/assets/stylesheets/application.css:13)):
+    2: <html>
+    3: <head>
+    4:   <title>Socialtomatoes</title>
+    5:   <%= stylesheet_link_tag    "application" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2391416454471119742_2154501180'
+
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-15 23:12:01 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (require_self can only be called once per source file
+  (in /Users/thomasfl/workspace/socialtomatoes/app/assets/stylesheets/application.css:13)):
+    2: <html>
+    3: <head>
+    4:   <title>Socialtomatoes</title>
+    5:   <%= stylesheet_link_tag    "application" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2391416454471119742_2154501180'
+
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-15 23:12:03 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (require_self can only be called once per source file
+  (in /Users/thomasfl/workspace/socialtomatoes/app/assets/stylesheets/application.css:13)):
+    2: <html>
+    3: <head>
+    4:   <title>Socialtomatoes</title>
+    5:   <%= stylesheet_link_tag    "application" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2391416454471119742_2154501180'
+
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-15 23:12:39 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.5ms)
+Compiled application.css  (1ms)  (pid 3262)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-15 23:12:40 +0200
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-15 23:12:40 +0200
+Served asset /application.css - 304 Not Modified (53ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-15 23:12:40 +0200
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-15 23:12:40 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-15 23:12:40 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-15 23:12:40 +0200
+Served asset /sessions.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-15 23:12:40 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-15 23:12:40 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-15 23:13:11 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.5ms)
+Compiled application.css  (1ms)  (pid 3262)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-15 23:13:11 +0200
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-15 23:13:11 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:11 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:11 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-15 23:13:11 +0200
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:11 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:11 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:11 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-15 23:13:13 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-15 23:13:13 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:13 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:13 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-15 23:13:13 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-15 23:13:13 +0200
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:13 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:13 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:13 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-15 23:13:25 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.5ms)
+Compiled application.css  (1ms)  (pid 3262)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:25 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:26 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-15 23:13:26 +0200
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:26 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:26 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:26 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-15 23:13:26 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-15 23:13:26 +0200
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/secret" for 127.0.0.1 at 2011-09-15 23:13:29 +0200
+  Processing by HomeController#secret as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-09-15 23:13:29 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:29 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-15 23:13:29 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-15 23:13:29 +0200
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:29 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:29 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:29 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-15 23:13:29 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:29 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-09-15 23:13:32 +0200
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-15 23:13:33 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:33 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:33 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:33 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-15 23:13:33 +0200
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-15 23:13:33 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:33 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-15 23:13:33 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-15 23:13:43 +0200
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QfeIh/GOi33i6KGSj9hwIRv/CJslhWifYmmjmunYHzQ=", "user"=>{"email"=>"thomas.flemming@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.4ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = 'thomas.flemming@gmail.com' LIMIT 1
+  [1m[36mSQL (35.7ms)[0m  [1mINSERT INTO "users" ("created_at", "crypted_password", "email", "remember_me_token", "remember_me_token_expires_at", "salt", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Thu, 15 Sep 2011 21:13:43 UTC +00:00], ["crypted_password", "$2a$10$xZy3jeOMF8eR26Gw6IW1xOnWdRPzEzyxgRO9Ph7YZE9UUOrlT9sH."], ["email", "thomas.flemming@gmail.com"], ["remember_me_token", nil], ["remember_me_token_expires_at", nil], ["salt", "8bcae0959ed0d6606c8e94657555c5b12244f273"], ["updated_at", Thu, 15 Sep 2011 21:13:43 UTC +00:00], ["username", nil]]
+PGError: ERROR:  null value in column "username" violates not-null constraint
+: INSERT INTO "users" ("created_at", "crypted_password", "email", "remember_me_token", "remember_me_token_expires_at", "salt", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 306ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  null value in column "username" violates not-null constraint
+: INSERT INTO "users" ("created_at", "crypted_password", "email", "remember_me_token", "remember_me_token_expires_at", "salt", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"):
+  app/controllers/users_controller.rb:8:in `create'
+
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/thomasfl/.rvm/gems/ruby-1.9.2-tv1_9_2_rc2/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.2ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to SorceryCore (20110915205652)
+Migrating to SorceryRememberMe (20110915205653)
+Migrating to DropUsername (20110915211607)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "users" DROP "username"[0m
+  [1m[35m (7.4ms)[0m  ALTER TABLE "users" ALTER COLUMN "email" TYPE character varying(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ALTER "email" SET NOT NULL[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110915211607')
+  [1m[36m (2.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mSHOW search_path[0m
+  [1m[35m (2.2ms)[0m   SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'users'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+  [1m[36mColumns for index index_users_on_remember_me_token on users (0.3ms)[0m  [1m SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 26010
+ AND a.attnum IN (8)
+[0m
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-15 23:19:48 +0200
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QfeIh/GOi33i6KGSj9hwIRv/CJslhWifYmmjmunYHzQ=", "user"=>{"email"=>"thomas.flemming@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.1ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = 'thomas.flemming@gmail.com' LIMIT 1
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "users" ("created_at", "crypted_password", "email", "remember_me_token", "remember_me_token_expires_at", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Thu, 15 Sep 2011 21:19:48 UTC +00:00], ["crypted_password", "$2a$10$N0EcGnPf0xaLX2w1ukxdUeRC//wJB6PLDby8fHeUcs58kKL6G5S5y"], ["email", "thomas.flemming@gmail.com"], ["remember_me_token", nil], ["remember_me_token_expires_at", nil], ["salt", "5265b903d34f10f89358598cd6f9132b0477e534"], ["updated_at", Thu, 15 Sep 2011 21:19:48 UTC +00:00]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 237ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-15 23:19:48 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 61ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-15 23:19:49 +0200
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-15 23:19:49 +0200
+Served asset /jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-15 23:19:49 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-15 23:19:49 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-15 23:19:49 +0200
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-15 23:19:49 +0200
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-15 23:19:49 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-15 23:19:49 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-09-15 23:19:52 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-15 23:19:52 +0200
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-15 23:19:52 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-15 23:19:52 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-15 23:19:52 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-15 23:19:52 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-15 23:19:52 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-15 23:19:52 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-15 23:19:52 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-09-15 23:20:00 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QfeIh/GOi33i6KGSj9hwIRv/CJslhWifYmmjmunYHzQ=", "email"=>"thomas.flemming@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1", "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email = 'thomas.flemming@gmail.com') LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Redirected to http://localhost:3000/secret
+Completed 302 Found in 239ms
+
+
+Started GET "/secret" for 127.0.0.1 at 2011-09-15 23:20:01 +0200
+  Processing by HomeController#secret as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered home/secret.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 57ms (Views: 46.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-15 23:20:01 +0200
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-15 23:20:01 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-15 23:20:01 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-15 23:20:01 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-15 23:20:01 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-15 23:20:01 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-15 23:20:01 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-15 23:20:01 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+  [1m[36m (33.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  SHOW search_path
+  [1m[36m (3.9ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'schema_migrations'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+  [1m[35m (3.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to SorceryCore (20110915205652)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (34.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying(255) NOT NULL, "email" character varying(255), "crypted_password" character varying(255), "salt" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (26.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110915205652')
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+Migrating to SorceryRememberMe (20110915205653)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (6.6ms)[0m  [1mALTER TABLE "users" ADD COLUMN "remember_me_token" character varying(255) DEFAULT NULL[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD COLUMN "remember_me_token_expires_at" timestamp DEFAULT NULL
+  [1m[36m (1.5ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'users'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+  [1m[35m (1.8ms)[0m  CREATE INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110915205653')[0m
+  [1m[35m (28.4ms)[0m  COMMIT
+Migrating to DropUsername (20110915211607)
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" DROP "username"
+  [1m[36m (7.2ms)[0m  [1mALTER TABLE "users" ALTER COLUMN "email" TYPE character varying(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ALTER "email" SET NOT NULL
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110915211607')[0m
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SHOW search_path
+  [1m[36m (2.3ms)[0m  [1m SELECT distinct i.relname, d.indisunique, d.indkey, t.oid
+ FROM pg_class t
+ INNER JOIN pg_index d ON t.oid = d.indrelid
+ INNER JOIN pg_class i ON d.indexrelid = i.oid
+ WHERE i.relkind = 'i'
+ AND d.indisprimary = 'f'
+ AND t.relname = 'users'
+ AND i.relnamespace IN (SELECT oid FROM pg_namespace WHERE nspname IN ('"$user"','public') )
+ ORDER BY i.relname
+[0m
+  [1m[35mColumns for index index_users_on_remember_me_token on users (0.3ms)[0m   SELECT a.attnum, a.attname
+ FROM pg_attribute a
+ WHERE a.attrelid = 34180
+ AND a.attnum IN (8)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 107ms (Views: 106.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /application.css - 200 OK (43ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /sessions.css - 200 OK (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /users.css - 200 OK (13ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /jquery.js - 200 OK (31ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /jquery_ujs.js - 200 OK (10ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /sessions.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-23 22:26:47 +0200
+Served asset /users.js - 200 OK (1ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-09-23 22:26:54 +0200
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-23 22:27:03 +0200
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ownWo/NGC489rrqza/04eelHzhSgOC6OcI7+5V05dSU=", "user"=>{"email"=>"thomas.flemming@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.4ms)[0m  SELECT 1 FROM "users" WHERE "users"."email" = 'thomas.flemming@gmail.com' LIMIT 1
+  [1m[36mSQL (53.4ms)[0m  [1mINSERT INTO "users" ("created_at", "crypted_password", "email", "remember_me_token", "remember_me_token_expires_at", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", Fri, 23 Sep 2011 20:27:03 UTC +00:00], ["crypted_password", "$2a$10$Ojbc5fYM24MtCo1SecQLEOTbKFNm3odxE/F1yIkh6DKtkkiJMjWoa"], ["email", "thomas.flemming@gmail.com"], ["remember_me_token", nil], ["remember_me_token_expires_at", nil], ["salt", "9e8389c55e47f47e8bd2b9a1e3b1ff241b89974e"], ["updated_at", Fri, 23 Sep 2011 20:27:03 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 299ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-23 22:27:03 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2011-09-23 22:27:06 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-09-23 22:27:16 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ownWo/NGC489rrqza/04eelHzhSgOC6OcI7+5V05dSU=", "email"=>"thomas.flemming@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1", "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email = 'thomas.flemming@gmail.com') LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 210ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-23 22:27:16 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 19.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/secret" for 127.0.0.1 at 2011-09-23 22:27:18 +0200
+  Processing by HomeController#secret as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered home/secret.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 14.0ms | ActiveRecord: 4.2ms)
