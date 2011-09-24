@@ -3,3 +3,5 @@ theming/.sass-cache
 tmp/*
 *~
 Gemfile.lock
+log/*
+db/development.sqlite3
