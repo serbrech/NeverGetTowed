@@ -1,0 +1,14 @@
+Basic stuff on how to install a devstation on ubuntu:
+
+
+get rvm
+rvm install 1.9.2 # takes a while
+
+get gem zip at: 
+http://rubygems.org/pages/download
+unzip it, cd into and run "ruby setup.rb"
+
+maybe: symlink /usr/bin/gem1.8 to /usr/bin/gem 
+
+gem install rails
+
