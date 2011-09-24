@@ -15,4 +15,18 @@ body {
 
 #logo {
 	background-image: url("../images/logo.png") no-repeat;
+	float: left;
+}
+
+#email {
+	
+}
+
+#social {
+	
+}
+
+#brown {
+	background-color: #CC9900;
+	width: 100%;
 }
