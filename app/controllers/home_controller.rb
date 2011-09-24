@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class HomeController < LandingController
   before_filter :require_login, :only => :secret
 
   def index
