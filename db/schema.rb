@@ -11,10 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110924120343) do
+ActiveRecord::Schema.define(:version => 20110924173102) do
+
+  create_table "planned_events", :force => true do |t|
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.text     "comment"
+    t.integer  "street_id"
+    t.float    "lat"
+    t.float    "lng"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "potential_customers", :force => true do |t|
     t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "streets", :force => true do |t|
+    t.string   "streetname"
+    t.float    "lat"
+    t.float    "lng"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

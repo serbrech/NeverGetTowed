@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  streetname: MyString
+  lat: 1.5
+  lng: 1.5
+
+two:
+  streetname: MyString
+  lat: 1.5
+  lng: 1.5
