@@ -961,3 +961,1643 @@ Served asset /application.css - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-23 22:53:03 +0200
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 11:44:11 +0200
+
+PGError (FATAL:  Ident authentication failed for user "never_get_towed"
+):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.0ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 11:44:26 +0200
+
+PGError (FATAL:  Ident authentication failed for user "never_get_towed"
+):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/h" for 127.0.0.1 at 2011-09-24 11:44:39 +0200
+
+PGError (FATAL:  Ident authentication failed for user "never_get_towed"
+):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-09-24 11:44:39 +0200
+
+PGError (FATAL:  Ident authentication failed for user "never_get_towed"
+):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)
+
+
+Started GET "/hom" for 127.0.0.1 at 2011-09-24 11:44:44 +0200
+
+PGError (FATAL:  Ident authentication failed for user "never_get_towed"
+):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 11:44:44 +0200
+
+PGError (FATAL:  Ident authentication failed for user "never_get_towed"
+):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 11:45:08 +0200
+
+PGError (FATAL:  Ident authentication failed for user "never_get_towed"
+):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.4ms)
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (11.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (4.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to SorceryCore (20110915205652)
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255) NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110915205652')[0m
+Migrating to SorceryRememberMe (20110915205653)
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "remember_me_token" varchar(255) DEFAULT NULL
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "remember_me_token_expires_at" datetime DEFAULT NULL[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110915205653')
+Migrating to DropUsername (20110915211607)
+  [1m[36m (0.6ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255) NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime, "remember_me_token" varchar(255), "remember_me_token_expires_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_users_on_remember_me_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "temp_index_altered_users_on_remember_me_token" ON "altered_users" ("remember_me_token")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime, "remember_me_token" varchar(255), "remember_me_token_expires_at" datetime) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('temp_index_altered_users_on_remember_me_token')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "altered_users"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime, "remember_me_token" varchar(255), "remember_me_token_expires_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_remember_me_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "temp_index_altered_users_on_remember_me_token" ON "altered_users" ("remember_me_token")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime, "remember_me_token" varchar(255), "remember_me_token_expires_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('temp_index_altered_users_on_remember_me_token')
+  [1m[36m (0.5ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "altered_users"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110915211607')[0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_remember_me_token')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 12:05:04 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (38.7ms)
+Compiled application.css  (1ms)  (pid 8642)
+Compiled sessions.css  (10ms)  (pid 8642)
+Compiled users.css  (1ms)  (pid 8642)
+Compiled application.js  (3ms)  (pid 8642)
+Compiled jquery.js  (2ms)  (pid 8642)
+Compiled jquery_ujs.js  (0ms)  (pid 8642)
+Compiled sessions.js  (155ms)  (pid 8642)
+Compiled users.js  (171ms)  (pid 8642)
+Completed 200 OK in 482ms (Views: 481.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-24 12:05:05 +0200
+Served asset /application.css - 200 OK (11ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-24 12:05:05 +0200
+Served asset /users.css - 200 OK (10ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-24 12:05:05 +0200
+Served asset /sessions.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 12:05:05 +0200
+Served asset /jquery.js - 200 OK (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 12:05:05 +0200
+Served asset /jquery_ujs.js - 200 OK (8ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 12:05:05 +0200
+Served asset /sessions.js - 200 OK (5ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 12:05:05 +0200
+Served asset /users.js - 200 OK (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 12:05:05 +0200
+Served asset /application.js - 200 OK (39ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 12:18:47 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (18.6ms)
+Completed 200 OK in 105ms (Views: 104.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-24 12:18:47 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-24 12:18:47 +0200
+Served asset /sessions.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 12:18:47 +0200
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-24 12:18:47 +0200
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 12:18:47 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 12:18:47 +0200
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 12:18:47 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 12:18:47 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/s" for 127.0.0.1 at 2011-09-24 12:18:57 +0200
+
+ActionController::RoutingError (No route matches [GET] "/s"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/secret" for 127.0.0.1 at 2011-09-24 12:18:58 +0200
+  Processing by HomeController#secret as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-09-24 12:18:58 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-24 12:18:59 +0200
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-24 12:18:59 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 12:18:59 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 12:18:59 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-24 12:18:59 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 12:18:59 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 12:18:59 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 12:18:59 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 12:41:32 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (20.1ms)
+Compiled application.js  (4ms)  (pid 9221)
+Completed 200 OK in 121ms (Views: 120.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-24 12:41:32 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 12:41:32 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-24 12:41:32 +0200
+Served asset /sessions.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 12:41:32 +0200
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 12:41:32 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 12:41:32 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-24 12:41:32 +0200
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 12:41:32 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 12:52:47 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (38.2ms)
+Completed 200 OK in 106ms (Views: 105.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-09-24 12:52:47 +0200
+Served asset /all.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 12:52:47 +0200
+Served asset /sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 12:52:47 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 12:52:47 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 12:52:47 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 12:52:47 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 12:52:50 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.1ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-09-24 12:52:50 +0200
+Served asset /all.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 12:52:50 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 12:52:50 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 12:52:50 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 12:52:50 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 12:52:50 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 12:55:11 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (22.6ms)
+Completed 200 OK in 138ms (Views: 137.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-09-24 12:55:12 +0200
+Served asset /all.css - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 12:55:12 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 12:55:12 +0200
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 12:55:12 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 12:55:12 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 12:55:12 +0200
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 12:55:45 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.0ms)
+ERROR: compiling _app_views_layouts_landing_html_erb___38841514_87119380 RAISED /home/ser/Code/NeverGetTowed/app/views/layouts/landing.html.erb:5: syntax error, unexpected ':', expecting ')'
+...esheet_link_tag "stylesheets" :all );@output_buffer.safe_con...
+...                               ^
+Function body:           def _app_views_layouts_landing_html_erb___38841514_87119380(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/landing";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>Never Get Towed!</title>
+  ');@output_buffer.append= ( stylesheet_link_tag "stylesheets" :all );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</head>
+<body>
+
+');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+</body>
+</html>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:52:in `render_with_layout'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/ser/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__66902894__process_action__707996685__callbacks'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/etag.rb:23:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/conditionalget.rb:25:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:195:in `context'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:190:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/sendfile.rb:101:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/methodoverride.rb:24:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/runtime.rb:17:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/lock.rb:15:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/handler/webrick.rb:59:in `service'
+/home/ser/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/ser/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/ser/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Completed 500 Internal Server Error in 44ms
+
+ActionView::Template::Error (/home/ser/Code/NeverGetTowed/app/views/layouts/landing.html.erb:5: syntax error, unexpected ':', expecting ')'
+...esheet_link_tag "stylesheets" :all );@output_buffer.safe_con...
+...                               ^):
+    2: <html>
+    3: <head>
+    4:   <title>Never Get Towed!</title>
+    5:   <%= stylesheet_link_tag "stylesheets" :all %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 12:55:52 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.0ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/all.css" for 127.0.0.1 at 2011-09-24 12:55:52 +0200
+Served asset /all.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/all.css"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/stylesheets.css" for 127.0.0.1 at 2011-09-24 12:55:52 +0200
+Served asset /stylesheets.css - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/stylesheets.css"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 12:55:52 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 12:55:52 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 12:55:52 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 12:55:52 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 12:55:52 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 12:56:18 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.1ms)
+Compiled landing.css  (0ms)  (pid 9463)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 12:56:18 +0200
+Served asset /landing.css - 200 OK (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 12:56:18 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 12:56:18 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 12:56:18 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 12:56:18 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 12:56:18 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 12:58:12 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.1ms)
+Compiled landing.css  (0ms)  (pid 9463)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 12:58:12 +0200
+Served asset /landing.css - 200 OK (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 12:58:12 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 12:58:12 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 12:58:12 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 12:58:12 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 12:58:12 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 12:58:26 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.0ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 12:58:26 +0200
+Served asset /landing.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 12:58:27 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 12:58:27 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 12:58:27 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 12:58:27 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 12:58:27 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/images/logo.png" for 127.0.0.1 at 2011-09-24 12:59:12 +0200
+Served asset /images/logo.png - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/logo.png"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/asset/images/logo.png" for 127.0.0.1 at 2011-09-24 12:59:16 +0200
+
+ActionController::RoutingError (No route matches [GET] "/asset/images/logo.png"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/logo.png" for 127.0.0.1 at 2011-09-24 12:59:17 +0200
+
+ActionController::RoutingError (No route matches [GET] "/logo.png"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at 2011-09-24 12:59:17 +0200
+
+ActionController::RoutingError (No route matches [GET] "/images/logo.png"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at 2011-09-24 12:59:24 +0200
+
+ActionController::RoutingError (No route matches [GET] "/images/logo.png"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/images/logo.pn" for 127.0.0.1 at 2011-09-24 13:00:05 +0200
+
+ActionController::RoutingError (No route matches [GET] "/images/logo.pn"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:00:07 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.0ms)
+Compiled landing.css  (0ms)  (pid 9463)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:00:07 +0200
+Served asset /landing.css - 200 OK (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:00:07 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:00:07 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:00:07 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:00:07 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:00:07 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:00:43 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.1ms)
+Compiled landing.css  (0ms)  (pid 9463)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:00:43 +0200
+Served asset /landing.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:00:43 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:00:43 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:00:43 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:00:43 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:00:43 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:00:46 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.0ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:00:46 +0200
+Served asset /landing.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:00:46 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:00:46 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:00:46 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:00:46 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:00:46 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:13:51 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.0ms)
+Compiled landing.css  (0ms)  (pid 9463)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:13:51 +0200
+Served asset /landing.css - 200 OK (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:13:51 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:13:51 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:13:51 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:13:51 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:13:51 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:14:19 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.1ms)
+Compiled landing.css  (0ms)  (pid 9463)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:14:19 +0200
+Served asset /landing.css - 200 OK (13ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:14:19 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:14:19 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:14:19 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:14:19 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:14:19 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/a" for 127.0.0.1 at 2011-09-24 13:15:02 +0200
+
+ActionController::RoutingError (No route matches [GET] "/a"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/asse" for 127.0.0.1 at 2011-09-24 13:15:02 +0200
+
+ActionController::RoutingError (No route matches [GET] "/asse"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2011-09-24 13:15:03 +0200
+Served asset  - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/l" for 127.0.0.1 at 2011-09-24 13:15:03 +0200
+Served asset /l - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/l"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/logo" for 127.0.0.1 at 2011-09-24 13:15:04 +0200
+Served asset /logo - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/logo"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/assets/logo." for 127.0.0.1 at 2011-09-24 13:15:04 +0200
+Served asset /logo. - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/logo."):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-09-24 13:15:05 +0200
+Served asset /logo.png - 200 OK (2ms)
+
+
+Started GET "/a" for 127.0.0.1 at 2011-09-24 13:15:26 +0200
+
+ActionController::RoutingError (No route matches [GET] "/a"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:15:26 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.1ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:15:26 +0200
+Served asset /landing.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:15:26 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:15:26 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:15:26 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:15:26 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:15:26 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:15:28 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.1ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:15:28 +0200
+Served asset /landing.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:15:28 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:15:28 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:15:28 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:15:28 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:15:28 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:16:21 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.1ms)
+Compiled landing.css  (0ms)  (pid 9463)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:16:22 +0200
+Served asset /landing.css - 200 OK (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:16:22 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:16:22 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:16:22 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:16:22 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:16:22 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:19:33 +0200
+  Processing by HomeController#index as HTML
+ERROR: compiling _app_views_home_index_html_erb___598395704_87071180 RAISED /home/ser/Code/NeverGetTowed/app/views/home/index.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ge_tag "logo.png", width=>200px, height=>200px);@output_buff...
+...                               ^
+/home/ser/Code/NeverGetTowed/app/views/home/index.html.erb:2: syntax error, unexpected tASSOC, expecting '='
+...go.png", width=>200px, height=>200px);@output_buffer.safe_co...
+...                               ^
+Function body:           def _app_views_home_index_html_erb___598395704_87071180(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "home/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<div id="logo">
+	');@output_buffer.append= ( image_tag "logo.png", width=>200px, height=>200px);@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</div>
+<div id="email">
+	
+</div>
+<div id="social">
+	
+</div>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `module_eval'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/template.rb:282:in `compile'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/template.rb:190:in `compile!'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/template.rb:143:in `block in render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/notifications.rb:55:in `instrument'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/template.rb:142:in `render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:99:in `render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/ser/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:416:in `_run__66902894__process_action__707996685__callbacks'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.1.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal.rb:193:in `dispatch'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_controller/metal.rb:236:in `block in action'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/routing/route_set.rb:531:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/etag.rb:23:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/conditionalget.rb:25:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:195:in `context'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/session/abstract/id.rb:190:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/cookies.rb:326:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.1.0/lib/active_record/query_cache.rb:62:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activerecord-3.1.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/sendfile.rb:101:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/railties-3.1.0/lib/rails/rack/logger.rb:13:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/methodoverride.rb:24:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/runtime.rb:17:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/activesupport-3.1.0/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/lock.rb:15:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/static.rb:53:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/railties-3.1.0/lib/rails/engine.rb:455:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/railties-3.1.0/lib/rails/rack/content_length.rb:16:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/railties-3.1.0/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/ser/.rvm/gems/ruby-1.9.2-head/gems/rack-1.3.2/lib/rack/handler/webrick.rb:59:in `service'
+/home/ser/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/ser/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/ser/.rvm/rubies/ruby-1.9.2-head/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered home/index.html.erb within layouts/landing (1.3ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (/home/ser/Code/NeverGetTowed/app/views/home/index.html.erb:2: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ge_tag "logo.png", width=>200px, height=>200px);@output_buff...
+...                               ^
+/home/ser/Code/NeverGetTowed/app/views/home/index.html.erb:2: syntax error, unexpected tASSOC, expecting '='
+...go.png", width=>200px, height=>200px);@output_buffer.safe_co...
+...                               ^):
+    1: <div id="logo">
+    2: 	<%= image_tag "logo.png", width=>200px, height=>200px%>
+    3: </div>
+    4: <div id="email">
+    5: 	
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:20:29 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.3ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:20:29 +0200
+Served asset /landing.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:20:29 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:20:29 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:20:29 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:20:29 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:20:29 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:20:52 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.5ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:20:52 +0200
+Served asset /landing.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:20:52 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:20:52 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:20:52 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:20:52 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:20:52 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/a" for 127.0.0.1 at 2011-09-24 13:21:10 +0200
+
+ActionController::RoutingError (No route matches [GET] "/a"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/asse" for 127.0.0.1 at 2011-09-24 13:21:11 +0200
+
+ActionController::RoutingError (No route matches [GET] "/asse"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2011-09-24 13:21:11 +0200
+Served asset  - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/logo" for 127.0.0.1 at 2011-09-24 13:21:12 +0200
+Served asset /logo - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/logo"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/logo." for 127.0.0.1 at 2011-09-24 13:21:12 +0200
+Served asset /logo. - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/logo."):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/logo.p" for 127.0.0.1 at 2011-09-24 13:21:13 +0200
+Served asset /logo.p - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/logo.p"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/logo.pn" for 127.0.0.1 at 2011-09-24 13:21:13 +0200
+Served asset /logo.pn - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/logo.pn"):
+  
+
+Rendered /home/ser/.rvm/gems/ruby-1.9.2-head/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-09-24 13:21:13 +0200
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:21:34 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.0ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:21:34 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:21:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:21:34 +0200
+Served asset /landing.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:21:34 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:21:34 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:21:34 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:21:59 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.1ms)
+Compiled landing.css  (0ms)  (pid 9463)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:21:59 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:21:59 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:21:59 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:21:59 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:21:59 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:21:59 +0200
+Served asset /landing.css - 200 OK (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:22:15 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.0ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:22:25 +0200
+Served asset /landing.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:23:03 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.3ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:23:03 +0200
+Served asset /landing.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:03 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:03 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:03 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:03 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:03 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-09-24 13:23:04 +0200
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:23:32 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.0ms)
+Compiled landing.css  (0ms)  (pid 9463)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:32 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:32 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:32 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:32 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:23:32 +0200
+Served asset /landing.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:32 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-09-24 13:23:32 +0200
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:23:34 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.0ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:23:34 +0200
+Served asset /landing.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:34 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:34 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:34 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:34 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:34 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:34 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:23:34 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-09-24 13:23:34 +0200
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:24:00 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.0ms)
+Compiled landing.css  (0ms)  (pid 9463)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:24:00 +0200
+Served asset /landing.css - 200 OK (13ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:00 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:00 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:00 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:00 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:00 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:00 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:00 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:00 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:00 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-09-24 13:24:00 +0200
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:24:10 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.3ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:24:10 +0200
+Served asset /landing.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:10 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:10 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:10 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:10 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:10 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:10 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:10 +0200
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:10 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:10 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-09-24 13:24:10 +0200
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:24:52 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.0ms)
+Compiled landing.css  (0ms)  (pid 9463)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:52 +0200
+Served asset /jquery.js - 200 OK (9ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:24:52 +0200
+Served asset /landing.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:52 +0200
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:52 +0200
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:52 +0200
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:24:52 +0200
+Served asset /sessions.js - 200 OK (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2011-09-24 13:24:52 +0200
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:27:03 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.0ms)
+Compiled landing.css  (0ms)  (pid 9463)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:27:03 +0200
+Served asset /landing.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:27:03 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
