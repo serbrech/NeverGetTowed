@@ -16,7 +16,7 @@ class HomeController < LandingController
       if @potentialCustomer.save
         flash[:notice] = "Takk for din interesse!"
       else
-        flash[:notice] = "Noe ser ut til å være feil med epostadressen. Vennligst prøv igjen."
+        flash[:sorry] = "Noe ser ut til å være feil med epostadressen. Vennligst prøv igjen."
       end
     end
     render :index
