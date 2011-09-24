@@ -6,4 +6,4 @@ tmp/cache/**
 Gemfile.lock
 *.sqlite3
 *.log
-log/development.log
+log/**
