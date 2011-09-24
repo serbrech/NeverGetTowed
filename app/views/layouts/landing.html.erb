@@ -5,6 +5,35 @@
   <%= stylesheet_link_tag "landing" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript" charset="utf-8">
+	$(function() {
+	  $(".button").click(function() {
+			// validate and process form
+			// first hide any error messages
+	    $('.error').hide();
+			var email = $("input#email_input").val();
+			if (email == "") {
+	      $("label#email_error").show();
+	      $("input#email_input").focus();
+	      return false;
+	    }
+		var dataString = 'email=' + email;
+
+		$.ajax({
+	      type: "POST",
+	      url: "hold_meg_informert",
+	      data: dataString,
+	      success: function() {
+	        $('#email').html("<div id='message'></div>");
+	        $('#message').html("<p>We will be in touch soon.</p>")
+	        .hide()
+	        .fadeIn(1500);
+	      }
+	     });
+	    return false;
+		});
+	});
+  </script>
 </head>
 <body>
 

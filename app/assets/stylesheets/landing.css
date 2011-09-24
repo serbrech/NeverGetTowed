@@ -14,43 +14,60 @@ body {
 	background: url("/assets/background.png") repeat;
 }
 
+#content {
+	background: #FFF;
+	width: 50%;
+	margin: auto 50% auto 0;
+	z-index: 10;
+	float: left;
+}
+
+#top {
+	width: 100%;
+}
+
+#top_right {
+	float: right;
+	width: 40%;
+	margin: 100px 80px 0 0;
+	clear: none;
+	font-size: 18pt;
+	text-shadow: #FFF 1px 1px 0;
+}
+
 #name {
-	font-size: 72pt;
-	position: absolute;
-	top: 30px;
-	left: 150px;
+	font-size: 50pt;
+	margin: 30px;
+	float: left;
 }
 
 #logo {
-	background: url("/assets/logo.png") no-repeat;
-	height:512px;
-	width:512px;
 	float: left;
-	left: 10%;
-	top: 20%;
-	position: absolute;
+	clear: left;
 }
 
 #email {
 	text-align: center;
 	background-color: #FFF;
-	width: 250px;
+	clear: both;
+	width: 100%;
 	height: 100px;
-	border: #CCCCCC 3px;
-	border-radius: 20px;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20;
-	position: absolute;
-	right: 80px;
-	top: 200px;
+	clear: both;
+}
+
+#email p {
+	float: left;
+	font-size: 24pt;
+}
+
+#email input {
+	float: left;
+	height: 24pt;
+	font-size: 24pt;
 }
 
 #email_input {
-	line-height: 18pt;
-	font-size: 18pt;
-	margin: 10px;
-	width: 80%;
-
+	line-height: 24pt;
 }
 
 #social {
@@ -59,9 +76,10 @@ body {
 }
 
 #brown {
-	background: url("/assets/background-brown.png");
+	background: url("/assets/background-gray.png");
 	width: 100%;
-	height: 200px;
-	bottom: 0;
+	height: 50%;
 	position: absolute;
+	bottom: 0;
+	z-index: -1;
 }
