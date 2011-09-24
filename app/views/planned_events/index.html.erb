@@ -1,0 +1,33 @@
+<h1>Listing planned_events</h1>
+
+<table>
+  <tr>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Comment</th>
+    <th>Street</th>
+    <th>Lat</th>
+    <th>Lng</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @planned_events.each do |planned_event| %>
+  <tr>
+    <td><%= planned_event.start_date %></td>
+    <td><%= planned_event.end_date %></td>
+    <td><%= planned_event.comment %></td>
+    <td><%= planned_event.street_id %></td>
+    <td><%= planned_event.lat %></td>
+    <td><%= planned_event.lng %></td>
+    <td><%= link_to 'Show', planned_event %></td>
+    <td><%= link_to 'Edit', edit_planned_event_path(planned_event) %></td>
+    <td><%= link_to 'Destroy', planned_event, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Planned event', new_planned_event_path %>

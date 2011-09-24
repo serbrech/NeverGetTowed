@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  start_date: 2011-09-24 19:31:02
+  end_date: 2011-09-24 19:31:02
+  comment: MyText
+  street_id: 1
+  lat: 1.5
+  lng: 1.5
+
+two:
+  start_date: 2011-09-24 19:31:02
+  end_date: 2011-09-24 19:31:02
+  comment: MyText
+  street_id: 1
+  lat: 1.5
+  lng: 1.5

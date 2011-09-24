@@ -1,0 +1,27 @@
+<h1>Listing streets</h1>
+
+<table>
+  <tr>
+    <th>Streetname</th>
+    <th>Lat</th>
+    <th>Lng</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @streets.each do |street| %>
+  <tr>
+    <td><%= street.streetname %></td>
+    <td><%= street.lat %></td>
+    <td><%= street.lng %></td>
+    <td><%= link_to 'Show', street %></td>
+    <td><%= link_to 'Edit', edit_street_path(street) %></td>
+    <td><%= link_to 'Destroy', street, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Street', new_street_path %>
