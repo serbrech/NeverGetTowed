@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(http://fonts.googleapis.com/css?family=Numans);
 
 * {
 	margin: 0;
@@ -6,7 +6,7 @@
 }
 
 html {
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'Numans', sans-serif;
 	color: #272727;
 }
 
