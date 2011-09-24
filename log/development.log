@@ -1,0 +1,34 @@
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 14:17:18 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (18.5ms)
+Compiled landing.css  (0ms)  (pid 10372)
+Compiled application.js  (3ms)  (pid 10372)
+Compiled jquery.js  (2ms)  (pid 10372)
+Compiled jquery_ujs.js  (0ms)  (pid 10372)
+Completed 200 OK in 146ms (Views: 146.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 14:17:19 +0200
+Served asset /landing.css - 200 OK (4ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 14:17:19 +0200
+Served asset /sessions.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 14:17:19 +0200
+Served asset /application.js - 200 OK (33ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 14:17:19 +0200
+Served asset /jquery_ujs.js - 200 OK (5ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 14:17:19 +0200
+Served asset /users.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 14:17:19 +0200
+Served asset /jquery.js - 200 OK (10ms)
