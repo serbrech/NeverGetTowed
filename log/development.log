@@ -961,3 +961,241 @@ Served asset /application.css - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-23 22:53:03 +0200
 Served asset /application.js - 304 Not Modified (0ms)
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (18.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (37.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to SorceryCore (20110915205652)
+  [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255) NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110915205652')[0m
+Migrating to SorceryRememberMe (20110915205653)
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "remember_me_token" varchar(255) DEFAULT NULL
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" ADD "remember_me_token_expires_at" datetime DEFAULT NULL[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110915205653')
+Migrating to DropUsername (20110915211607)
+  [1m[36m (0.5ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255) NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime, "remember_me_token" varchar(255), "remember_me_token_expires_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_remember_me_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_users_on_remember_me_token" ON "altered_users" ("remember_me_token")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime, "remember_me_token" varchar(255), "remember_me_token_expires_at" datetime) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('temp_index_altered_users_on_remember_me_token')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "altered_users"[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "crypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime, "remember_me_token" varchar(255), "remember_me_token_expires_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_remember_me_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_users")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_users_on_remember_me_token" ON "altered_users" ("remember_me_token")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) NOT NULL, "crypted_password" varchar(255), "salt" varchar(255), "created_at" datetime, "updated_at" datetime, "remember_me_token" varchar(255), "remember_me_token_expires_at" datetime) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('temp_index_altered_users_on_remember_me_token')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_users_on_remember_me_token" ON "users" ("remember_me_token")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "altered_users"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110915211607')[0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_remember_me_token')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:42:20 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (7.9ms)
+Compiled application.css  (48ms)  (pid 27318)
+Compiled landing.css  (12ms)  (pid 27318)
+Compiled sessions.css  (54ms)  (pid 27318)
+Compiled users.css  (3ms)  (pid 27318)
+Compiled application.js  (3ms)  (pid 27318)
+Compiled jquery.js  (2ms)  (pid 27318)
+Compiled jquery_ujs.js  (0ms)  (pid 27318)
+Compiled sessions.js  (148ms)  (pid 27318)
+Compiled users.js  (73ms)  (pid 27318)
+Completed 200 OK in 783ms (Views: 782.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/landing.css?body=1" for 127.0.0.1 at 2011-09-24 13:42:23 +0200
+Served asset /landing.css - 200 OK (27ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2011-09-24 13:42:23 +0200
+Served asset /application.css - 200 OK (58ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2011-09-24 13:42:23 +0200
+Served asset /sessions.css - 200 OK (52ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2011-09-24 13:42:23 +0200
+Served asset /users.css - 200 OK (26ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:23 +0200
+Served asset /jquery.js - 200 OK (486ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:24 +0200
+Served asset /users.js - 200 OK (130ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:24 +0200
+Served asset /jquery_ujs.js - 200 OK (27ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:24 +0200
+Served asset /sessions.js - 200 OK (27ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:24 +0200
+Served asset /application.js - 200 OK (371ms)
+
+
+Started GET "/secret" for 127.0.0.1 at 2011-09-24 13:42:29 +0200
+  Processing by HomeController#secret as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-09-24 13:42:29 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:29 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-09-24 13:42:35 +0200
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:35 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:35 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:35 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:35 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:35 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-09-24 13:42:42 +0200
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MYXQTHQeZsDKB2id9dBn4YPqg3nZk7Rjul+CrsQi0gE=", "user"=>{"email"=>"jurgemaister@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE "users"."email" = 'jurgemaister@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (7.5ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "remember_me_token", "remember_me_token_expires_at", "salt", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 24 Sep 2011 11:42:42 UTC +00:00], ["crypted_password", "$2a$10$WaBa.KzcN6XfMa5xWlNMGej.Z0NsEiP3Z1hfXZaGeuiq2O0LE7wqu"], ["email", "jurgemaister@gmail.com"], ["remember_me_token", nil], ["remember_me_token_expires_at", nil], ["salt", "08248689de97979b240a96992f1492e6286815c8"], ["updated_at", Sat, 24 Sep 2011 11:42:42 UTC +00:00]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 259ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:42:42 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.0ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:42 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:42 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:42 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/secret" for 127.0.0.1 at 2011-09-24 13:42:52 +0200
+  Processing by HomeController#secret as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at 2011-09-24 13:42:52 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:52 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:52 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:52 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-09-24 13:42:55 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MYXQTHQeZsDKB2id9dBn4YPqg3nZk7Rjul+CrsQi0gE=", "email"=>"jurgemaister@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1", "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE (email = 'jurgemaister@gmail.com') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/secret
+Completed 302 Found in 206ms
+
+
+Started GET "/secret" for 127.0.0.1 at 2011-09-24 13:42:55 +0200
+  Processing by HomeController#secret as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered home/secret.html.erb within layouts/landing (20.9ms)
+Completed 200 OK in 101ms (Views: 93.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:55 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:42:55 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-24 13:43:07 +0200
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/landing (0.0ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2011-09-24 13:43:07 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2011-09-24 13:43:07 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2011-09-24 13:43:07 +0200
+Served asset /application.js - 304 Not Modified (0ms)

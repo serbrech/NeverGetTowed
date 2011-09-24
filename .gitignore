@@ -5,4 +5,4 @@ tmp/*
 Gemfile.lock
 *.sqlite3
 *.log
-development.log
+log/development.log
