@@ -1,8 +1,0 @@
-.DS_Store
-theming/.sass-cache
-tmp/*
-*~
-Gemfile.lock
-*.sqlite3
-*.log
-log/development.log

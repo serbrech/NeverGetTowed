@@ -12,3 +12,7 @@ maybe: symlink /usr/bin/gem1.8 to /usr/bin/gem
 
 gem install rails
 
+
+apt-get install libpq-dev
+
+apt-get install nodejs
