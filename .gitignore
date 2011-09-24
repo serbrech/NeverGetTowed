@@ -1,0 +1,9 @@
+.DS_Store
+theming/.sass-cache
+tmp/**
+tmp/cache/**
+*~
+Gemfile.lock
+*.sqlite3
+*.log
+log/development.log
