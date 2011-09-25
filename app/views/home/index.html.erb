@@ -1,34 +1,32 @@
-  <div id="container">
-   <div class="yellow">
-      <header>
-        <div id="logo"></div>
-      </header>
-    
-        <h1>NeverGetTowed</h1>
-        
-        <div id="main_wrapper">
-          <div id="message_box" class="floatleft">
-          NeverGetTowed er en tjeneste som varsler deg dersom gaten du har parkert i skal ryddes for snø eller feies. Spar penger – unngå borttauing.
-          </div>
-      
-            <iframe width="560" height="315" src="http://www.youtube.com/embed/kVh8Z35pDm0" frameborder="0" allowfullscreen></iframe>
-       
-        </div>
-        <div class="clearfix"></div>
-      </div>
-      
-      
-      <div class="signup_wrapper center_div" id="email">
-		<form action="hold_meg_informert" method="post">
-			<label id="email_error" class="error">Epostadresse er påkrevd</label>
-	        <input type="text" id="signup" name="email_input" placeholder="Din e-post adresse" />
+<div id="grass"><div id="road"></div></div>
+<div id="content">
+	<h1>NeverGetTowed</h1>
+	<div class="container" id="container_1">
+		<p class="floatleft fifty">NeverGetTowed er en tjeneste som varsler deg dersom gaten du har parkert i skal ryddes for snø eller feies. Spar penger – unngå borttauing.</p>
+		<iframe class="floatright" width="560" height="315" src="http://www.youtube.com/embed/kVh8Z35pDm0" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<div id="epost" class="container">
+		<form action="register" method="post">
+			<label for="email_input">E-post adresse</label>
+	        <input type="email" id="signup" name="email_input" placeholder="Din e-post adresse" /><br />
+			
+			<label for="mobil_input">Mobilnummer</label>
+			<input type="text" name="mobil_input" value="" id=""><br />
+			
+			<label for="password_input">Passord</label>
+			<input type="password" name="password_input" value="" id=""><br />
+			
+			<label for="password_repeat_input">Gjenta passord</label>
+			<input type="password" name="password_repeat_input" value="" id=""><br />
+			
+			<label for="payment_input">Ønsket betalingsmåte</label>
+			<select name="payment_input" id="payment_input" onchange="" size="1">
+				<option value="visa">Visa</option>
+				<option value="sms">SMS</option>
+				<option value="paypal">Paypal</option>
+			</select><br />
+			
 			<input type="submit" class="button" value="Registrer" />
 		</form>
-      </div>
-     
-
-
-    <footer>
-
-    </footer>
-  </div>
+	</div>
+</div>
