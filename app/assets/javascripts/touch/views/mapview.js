@@ -1,4 +1,5 @@
 NGT.views.mapview = Ext.extend(Ext.Panel, {
+    id:'mapview',
 	fullscreen:true,
     layout: 'fit',
     items: [{
@@ -36,8 +37,8 @@ NGT.views.mapview = Ext.extend(Ext.Panel, {
 	    	}
     	},
     }],
-    getMarkerPosition : function(){
-        
+    showStreets : function(streets){
+        //alert(streets);
     },
     dockedItems:[
     	{

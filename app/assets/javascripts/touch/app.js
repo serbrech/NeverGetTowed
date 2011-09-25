@@ -1,3 +1,5 @@
+//= require jquery
+
 NGT = new Ext.Application({
 	name : "NeverGetTowed",
 	pages : new Array(),
