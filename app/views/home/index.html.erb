@@ -31,14 +31,12 @@
 			<label for="password_repeat_input">Gjenta passord</label>
 			<input type="password" name="password_repeat_input" value="" id=""><br />
 			
-			<label for="payment_input">Ønsket betalingsmåte</label><br />
-			<label for="payment_input">Visa</label>
-			<input type="radio" name="payment_input" value="" id="">
-			<label for="payment_input">SMS</label>
-			<input type="radio" name="payment_input" value="" id="">
-			<label for="payment_input">Paypal</label>
-			<input type="radio" name="payment_input" value="" id=""><br />
-			
+			<label for="payment_input">Ønsket betalingsmåte</label>
+			<select name="payment_input" id="payment_input" onchange="" size="1">
+				<option value="Visa">Visa</option>
+				<option value="Sms">SMS</option>
+				<option value="Paypal">Paypal</option>
+			</select><br />
 			<input type="submit" class="button" value="Registrer" />
 		</form>
 	</div>
