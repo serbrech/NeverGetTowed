@@ -52,6 +52,16 @@ h1 {
 	height: 150px;
 	width: 100%;
 }
+#signpost {
+	position: absolute;
+	top: 220px;
+	left: 10%;
+	transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-webkit-transform: rotate(-15deg);
+	z-index: -5;
+}
+
 #content {
 	margin: 200px auto 100px auto;
 	min-width: 700px;
