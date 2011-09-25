@@ -1,18 +1,29 @@
 <div id="grass"><div id="road"></div></div>
-<img src="/assets/signpost.png" id="signpost" />
-<div id="content">
-	<h1>NeverGetTowed</h1>
-	<div class="container" id="container_1">
-		<p class="floatleft fifty">NeverGetTowed er en tjeneste som varsler deg dersom gaten du har parkert i skal ryddes for snø eller feies. Spar penger – unngå borttauing.</p>
-		<iframe class="floatright" width="560" height="315" src="http://www.youtube.com/embed/kVh8Z35pDm0" frameborder="0" allowfullscreen></iframe>
+<img src="/assets/signpost.png" id="signpost" />   
+
+<ul id="socialMedia">
+  <li>
+    <a href="#" title="Til Facebook siden" target="_blank"><img src="/assets/facebook.png" alt="Til Facebook" /> </a>
+  </li>
+  <li>
+    <a href="#" title="Til Twitter siden" target="_blank"><img src="/assets/twitter.png" alt="Til Twitter" /> </a>
+  </li>
+</ul>
+ 
+<div id="mainContent">
+	<div id="topSection">
+      <h1>NeverGetTowed</h1>
+	  <div id="message_box" class="">
+      NeverGetTowed er en tjeneste som varsler deg dersom gaten du har parkert i skal ryddes for snø eller feies. Spar penger og unngå borttauing. 
+      </div>
 	</div>
-	<div id="epost" class="container">
+    <div class="formWrapper roundAndShadow">
 		<form action="register" method="post">
-			<label for="email_input">E-post adresse</label>
-	        <input type="email" id="signup" name="email_input" placeholder="Din e-post adresse" /><br />
+			<label for="email_input">E-post</label>
+	        <input type="email" id="signup" name="email_input" placeholder="Din e-post" /><br />
 			
 			<label for="mobil_input">Mobilnummer</label>
-			<input type="text" name="mobil_input" value="" id=""><br />
+			<input type="text" name="mobil_input" placeholder="Ditt mobilnummer" value="" id=""><br />
 			
 			<label for="password_input">Passord</label>
 			<input type="password" name="password_input" value="" id=""><br />
@@ -20,14 +31,22 @@
 			<label for="password_repeat_input">Gjenta passord</label>
 			<input type="password" name="password_repeat_input" value="" id=""><br />
 			
-			<label for="payment_input">Ønsket betalingsmåte</label>
-			<select name="payment_input" id="payment_input" onchange="" size="1">
-				<option value="visa">Visa</option>
-				<option value="sms">SMS</option>
-				<option value="paypal">Paypal</option>
-			</select><br />
+			<label for="payment_input">Ønsket betalingsmåte</label><br />
+			<label for="payment_input">Visa</label>
+			<input type="radio" name="payment_input" value="" id="">
+			<label for="payment_input">SMS</label>
+			<input type="radio" name="payment_input" value="" id="">
+			<label for="payment_input">Paypal</label>
+			<input type="radio" name="payment_input" value="" id=""><br />
 			
 			<input type="submit" class="button" value="Registrer" />
 		</form>
+	</div>
+  
+  <iframe class="roundAndShadow" width="457" height="340" src="http://www.youtube.com/embed/oUnLx39f6xY" frameborder="0" allowfullscreen></iframe>
+	<div id="padder">
+   		<div id="footer">
+  			Har du spørsmål om NeverGetTowed, send en e-post til info@nevergettowed.com
+		</div>
 	</div>
 </div>
