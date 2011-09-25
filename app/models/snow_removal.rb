@@ -24,7 +24,7 @@ class SnowRemoval
         end
         if(streetname and streetname.size > 0)
 
-          street = Street.find_by_streetname("Testveien")
+          street = Street.find_by_streetname(streetname)
           if(not(street))
             street = Street.new(:streetname => streetname)
             street.save
@@ -32,7 +32,7 @@ class SnowRemoval
           event = PlannedEvent.new(:start_date => Time.now,
                                    :end_date => Time.now,
                                    :street => street,
-                                   :comment => "Kommentaren")
+                                   :comment => comment)
           event.save
           puts "Street: '#{streetname}' => '#{comment}'"
         end
