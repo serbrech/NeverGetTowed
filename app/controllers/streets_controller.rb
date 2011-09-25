@@ -12,7 +12,7 @@ class StreetsController < ApplicationController
     #   street.planned_events.each do |event|
     #
     #   end
-    end
+    # end
 
     headers["Content-Type"] = "application/json; charset=utf-8"
     render :json => { :markers => @markers }
