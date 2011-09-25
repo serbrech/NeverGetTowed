@@ -1,4 +1,4 @@
-class SnowRemoval < ActiveRecord::Base
+class SnowRemoval
 
   def screenscrape_new_data
     url = "http://www.samferdselsetaten.oslo.kommune.no/" +
@@ -13,10 +13,29 @@ class SnowRemoval < ActiveRecord::Base
         interval   = row_element.css("td")[3].text
 
         # Don't bother parsing dates and times for now
-        start_time = Time.new(2011, 10, 20, 13, 30, 0, "+01:00")
-        end_time = Time.new(2011, 10, 20, 13, 30, 0, "+01:00")
+        start_time = Time.new(2011, 9, 25, 19, 30, 0, "+01:00")
+        end_time = Time.new(2011, 9, 25, 20, 30, 0, "+01:00")
+
         # street = Street.new(:streetname => "Teststreet")
 
+        area = streetname[/,(.*)/,1]
+        if(area)
+          comment = area.strip + " " + comment
+        end
+        if(streetname and streetname.size > 0)
+
+          street = Street.find_by_streetname("Testveien")
+          if(not(street))
+            street = Street.new(:streetname => streetname)
+            street.save
+          end
+          event = PlannedEvent.new(:start_date => Time.now,
+                                   :end_date => Time.now,
+                                   :street => street,
+                                   :comment => "Kommentaren")
+          event.save
+          puts "Street: '#{streetname}' => '#{comment}'"
+        end
       end
     end
 
