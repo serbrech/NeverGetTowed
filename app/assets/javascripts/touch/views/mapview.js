@@ -7,6 +7,12 @@ NGT.views.mapview = Ext.extend(Ext.Panel, {
         useCurrentLocation: true,
         mapOptions : {
             zoom : 15,
+            panControl:false,
+            overviewMapControl:false,
+            rotateControl : false,
+            scaleControl:false,
+            zoomControl:false,
+            streetViewControl:false,
             useCurrentLocation: true,
             mapTypeId : google.maps.MapTypeId.ROADMAP,
             navigationControl: true,
@@ -14,32 +20,39 @@ NGT.views.mapview = Ext.extend(Ext.Panel, {
                 style: google.maps.NavigationControlStyle.DEFAULT
             },
         },
+        marker: undefined,
         listeners:{
-	    	maprender : function(comp, map){
-	    		
-	    	},
-	    	centerchange:function(senchaMap,googleMap,center){
-	    		var marker = new google.maps.Marker({
-		    		map : googleMap,
-		        	position: center,
-		        	title : "My car"
-	    		});
+	    	centerchange:function(senchaMap,gMap,center){
+                if(NGT.views.mapview.currentMarker != undefined) return;
+                Ext.dispatch({
+                    controller: 'map',
+                    action: 'mark',
+                    data:{
+                        gmap:gMap,
+                        loc:center,
+                        view:this
+                    }
+                });
 	    	}
     	},
-    	addmarker: function(position, info) {
-    		var marker = new google.maps.Marker({
-		        position: position,
-		        title : info
-	    	});
-	    	marker.setMap(this.map);
-    	}
     }],
+    getMarkerPosition : function(){
+        
+    },
     dockedItems:[
-    	{xtype:'toolbarview', dock:'bottom'}
+    	{
+            xtype:'toolbarview', 
+            dock:'bottom', 
+            currentMarker : this.marker
+        }
     ],
+    tapholdHandler:function(a,b,c,d){
+        //alert('taphold');
+    },
     initComponent: function() {
         NGT.views.mapview.superclass.initComponent.apply(this, arguments);
-
+        //this.on('tap',this.toggleMenus, this, {element : 'body'});
+        this.on('taphold', this.tapholdHandler, this, {element : 'body'});
     },
     
 });

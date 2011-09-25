@@ -1,7 +1,8 @@
 NGT.views.homeview = Ext.extend(Ext.Panel, {
 	fullscreen:true,
     layout: 'fit',
-    items: [],
+    items: [
+    ],
     dockedItems:[]
 });
 

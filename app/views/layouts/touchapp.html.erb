@@ -2,14 +2,19 @@
 <html>
 <head>
   <title>Never Get Towed!</title>
-  <%= stylesheet_link_tag  "sencha/css/sencha-touch" %>
+  <%= stylesheet_link_tag  "sencha/css/sencha-touch" %>  
+  <%= stylesheet_link_tag  "touch" %>
+
 
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
   <%= javascript_include_tag "touch/sencha-touch" %>
   <%= javascript_include_tag "touch/app" %>
   <%= javascript_include_tag "touch/views/homeview" %>
-    <%= javascript_include_tag "touch/views/toolbar" %>
+  <%= javascript_include_tag "touch/views/toolbar" %>
   <%= javascript_include_tag "touch/views/mapview" %>
+
+  <%= javascript_include_tag "touch/controllers/mapcontroller" %>
+  <%= javascript_include_tag "touch/controllers/parkingcontroller" %>
 
   <!-- Google Maps JS -->
   <%= csrf_meta_tags %>
