@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110925110208) do
+ActiveRecord::Schema.define(:version => 20110925121959) do
 
   create_table "planned_events", :force => true do |t|
     t.datetime "start_date"
@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(:version => 20110925110208) do
     t.datetime "updated_at"
     t.string   "remember_me_token"
     t.datetime "remember_me_token_expires_at"
+    t.string   "mobile"
+    t.string   "payment_method"
   end
 
   add_index "users", ["remember_me_token"], :name => "index_users_on_remember_me_token"
