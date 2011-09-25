@@ -1,4 +1,6 @@
 class StreetsController < ApplicationController
+  before_filter :authentication_check
+
   # GET /streets
   # GET /streets.json
   def index
@@ -80,4 +82,15 @@ class StreetsController < ApplicationController
       format.json { head :ok }
     end
   end
+
+
+
+private
+
+  def authentication_check
+    authenticate_or_request_with_http_basic do |user, password|
+      user == "never" && password == "4ever"
+    end
+  end
+
 end

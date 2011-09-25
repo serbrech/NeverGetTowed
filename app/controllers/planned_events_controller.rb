@@ -1,4 +1,45 @@
+# -*- coding: utf-8 -*-
 class PlannedEventsController < ApplicationController
+
+  # GET /planned_events_for_location
+  # GET /planned_events_for_location.json
+  def planned_events_for_location
+    lat = params[:lat]
+    lng = params[:lng]
+    jsoncallback = params[:jsoncallback]
+
+    @markers = {
+      :marker => {
+        :streetName => "Sporveisgata",
+        :event => "Snømåking fra kl. 18:00 til kl. 19:00",
+        :lat => "59.925152",
+        :lng => "10.725403"
+      },
+      :marker => {
+        :streetName => "Wessels gate",
+        :event => "Snømåking fra kl. 18:00 til kl. 19:00",
+        :lat => "59.919646",
+        :lng => "10.741582"
+      },
+      :marker => {
+        :streetName => "Nedre Slottsgate",
+        :event => "Snømåking fra kl. 18:00 til kl. 19:00",
+        :lat => "59.910460",
+        :lng => "10.740981"
+      }
+    }
+
+    if(jsoncallback)then
+      response = "#{jsoncallback}(#{@markers.to_json});"
+      headers["Content-Type"] = "text/javascript; charset=utf-8"
+      render(:text => response)
+    else
+      headers["Content-Type"] = "application/json; charset=utf-8"
+      render :json => { :markers => @markers }
+    end
+
+  end
+
   # GET /planned_events
   # GET /planned_events.json
   def index
