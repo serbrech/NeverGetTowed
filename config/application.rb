@@ -4,6 +4,8 @@ require 'rails/all'
 require 'open-uri'
 require 'nokogiri'
 require 'json'
+require 'mechanize'
+require 'cgi'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line

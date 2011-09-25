@@ -26,6 +26,17 @@ class HomeController < LandingController
 
       if @user.save
         flash[:notice] = "Takk for din interesse!"
+
+        if(mobil and mobil.strip.length == 8 )
+          tel = mobil.strip
+          msg = "Velkommen til NeverGetTowed! Test løsningen på http://nevergettowed.com/touch For å sjekke "
+          msg = CGI.escape(msg)
+          url = "http://smsc.vianett.no/V3/CPA/MT/MT.ashx?username=tmk&password=tmk321&msgid=1234&" +
+                "tel=#{tel}&msg=#{msg}&campaignid=230170&senderaddresstype=5&senderaddress=NeverGetTowed"
+          response = open(url).read
+          puts response
+        end
+
       else
         flash[:sorry] = "Noe ser ut til å være feil med epostadressen. Vennligst prøv igjen."
       end

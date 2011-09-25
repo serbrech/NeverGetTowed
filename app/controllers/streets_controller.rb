@@ -1,6 +1,24 @@
 class StreetsController < ApplicationController
   before_filter :authentication_check
 
+
+  def get_street_info
+    streetname = params[:streetname]
+
+    @streets = []
+    street = Street.find_by_streetname(streetname)
+    # if(street)
+    #   @streets << street.streetname
+    #   street.planned_events.each do |event|
+    #
+    #   end
+    end
+
+    headers["Content-Type"] = "application/json; charset=utf-8"
+    render :json => { :markers => @markers }
+  end
+
+
   # GET /streets
   # GET /streets.json
   def index
