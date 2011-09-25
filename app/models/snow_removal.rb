@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class SnowRemoval
 
   def screenscrape_new_data
@@ -22,6 +23,7 @@ class SnowRemoval
         if(area)
           comment = area.strip + " " + comment
         end
+        comment = "Snømåking " + comment
         if(streetname and streetname.size > 0)
 
           street = Street.find_by_streetname(streetname)
