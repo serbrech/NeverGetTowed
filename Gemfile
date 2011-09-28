@@ -8,6 +8,7 @@ gem 'rails', '3.1.0'
 gem 'nokogiri'
 gem 'json'
 gem 'mechanize'
+gem 'blueprint-rails'
 
 group :production do
   gem 'pg'

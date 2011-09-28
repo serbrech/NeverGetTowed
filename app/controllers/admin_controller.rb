@@ -3,7 +3,7 @@ class AdminController < ApplicationController
   before_filter :authentication_check
 
   def index
-    @potential_customers = User.find(:all,{:order => "created_at desc" })
+    @users = User.find(:all,{:order => "created_at desc" })
   end
 
 private

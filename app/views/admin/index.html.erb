@@ -1,11 +1,24 @@
 <h1>Admininistration</h1>
 
-<p>Totalt <%=@potential_customers.size.to_s %> har meldt sin interesse.</p>
+<p><%=@users.size.to_s %> people showed their interest!</p>
 
-<p>
-   <ul>
-   <% @potential_customers.each do |customer| %>
-      <li><%= customer.email %> <%= customer.created_at %></li>
-   <% end %>
-   </ul>
-</p>
+
+   <table>
+      <thead>
+   		<th>Email</th>
+   		<th>Mobile</th>
+         <th>Registration Date</th>
+   		<th>Payment Method</th>       
+      </thead>
+      <tbody>
+         <% @users.each do |user| %>
+         <tr>
+            <td><%= user.email %></td>
+            <td><%= user.mobile %></td>
+            <td><%= user.created_at %></td>
+            <td><%= user.payment_method %> </td>
+         </tr>
+      <% end %>
+      </tbody>
+   </table>
+</div>
