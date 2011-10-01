@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110925121959) do
+ActiveRecord::Schema.define(:version => 20111001085353) do
 
   create_table "planned_events", :force => true do |t|
     t.datetime "start_date"
@@ -39,6 +39,11 @@ ActiveRecord::Schema.define(:version => 20110925121959) do
     t.float    "lng"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "northeast_lat"
+    t.float    "northeast_lng"
+    t.float    "southwest_lat"
+    t.float    "southwest_lng"
+    t.string   "address_components"
   end
 
   create_table "users", :force => true do |t|

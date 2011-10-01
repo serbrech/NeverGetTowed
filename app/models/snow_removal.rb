@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 class SnowRemoval
 
+  # Get data about planned snow removal using screenscraping.
   def screenscrape_new_data
     url = "http://www.samferdselsetaten.oslo.kommune.no/" +
           "vei_og_trafikk/broyting_og_bortkjoring/oversikt_bortkjoring_av_sno/"
@@ -40,33 +41,6 @@ class SnowRemoval
         end
       end
     end
-
-    # street.save
-    # event = PlannedEvent.new(:start_date => Time.now, :end_date => Time.now, :street => street, :comment => "Kommentaren")
-    # event.save
-  end
-
-  def self.streetname_spellchecker(scraped_streetname)
-    url = "https://maps.googleapis.com/maps/api/place/search/json?"
-    lat = 59.925152
-    lng = 10.725403
-    radius = 300
-    urlparam = {
-            'location' => "#{lat},#{lng}",
-            'radius' => radius,
-            'sensor' => "true",
-            'types'  => 'parking|locality|street_address',
-            'key'    =>  'AIzaSyCsFYnFa6YfocJSIsr4dUm9eJRStVfRNSM'
-    }
-    # completeurl = url + "".join([ "&%s=%s" % (key, val) for key, val in urlparam.items() ])[1:]
-    # complete_url = url + urlparam.join("=")
-    completeurl = url
-    urlparam.each do |key,val|
-      completeurl += "#{key}=#{val.to_s}&"
-    end
-    content = open(completeurl).read
-    puts content
-
   end
 
 end
