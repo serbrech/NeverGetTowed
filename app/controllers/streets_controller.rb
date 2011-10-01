@@ -1,6 +1,5 @@
 class StreetsController < ApplicationController
-  before_filter :authentication_check
-
+  before_filter :basic_http_authentication
 
   def get_street_info
     streetname = params[:streetname]
@@ -100,16 +99,6 @@ class StreetsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to streets_url }
       format.json { head :ok }
-    end
-  end
-
-
-
-private
-
-  def authentication_check
-    authenticate_or_request_with_http_basic do |user, password|
-      user == "never" && password == "4ever"
     end
   end
 
