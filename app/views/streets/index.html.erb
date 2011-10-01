@@ -1,5 +1,11 @@
 <h1>Gater med planlagte hendelser</h1>
 
+  <p>
+    Antall gater totalt: <%= Street.find(:all).size.to_s %><br/>
+    Gater uten posisjon: <%= Street.find(:all, :conditions => "lat is null").size.to_s %><br/>
+    Antall planlagte hendelser: <%= PlannedEvent.all().size.to_s %> <br/>
+  </p>
+
   <table>
   <thead>
     <tr>
