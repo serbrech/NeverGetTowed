@@ -40,7 +40,8 @@ class Street < ActiveRecord::Base
     page = agent.get(url, {
       'address' => self.streetname + ", #{city_name}",
       'sensor' => false,
-      'region' => 'no'
+      'region' => 'no',
+      'key' => 'ABQIAAAAvHg26MXzCcZPHlKrGs_slBRqpojeccfxkLI5MIsXhsXwciLmMRQZ3GI66gNy6d8gdWqCH763g0mdEA'
     })
     data = JSON.parse(page.body)
     if(data["status"] == "OVER_QUERY_LIMIT")
