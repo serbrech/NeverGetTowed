@@ -1,23 +1,27 @@
 <h1>Gater med planlagte hendelser</h1>
 
-  <ul style="list-style-type:none;">
-  <% @streets.each do |street| %>
-    <li>
-      <span style="width: 300px;display: block;float: left;"><%= street.streetname %></span>
-
-      <a href=%= link_to 'Planned events', street %>
-      <%= link_to 'Show', street %>
-      <%= link_to 'Edit', edit_street_path(street) %>
-      <ul>
-        <% street.planned_events.each do |event| %>
-          <li>'<%=event.comment %>' Start: <%= event.start_date %>  Slutt: <%= event.start_date %></li>
-        <% end %>
-      </ul>
-      <!--<td><%= link_to 'Destroy', street, confirm: 'Are you sure?', method: :delete %></td>-->
-    </li>
-  <% end %>
-
-</ul>
+  <table>
+  <thead>
+    <tr>
+     <th>Gate</th>
+     <th>Planlagte hendelser</th>
+    </tr>
+    </thead>
+  <tbody>
+    <% @streets.each do |street| %>
+    <tr>
+      <td ><%= link_to street.streetname, street %></td>
+      <td>
+          <% street.planned_events.each do |event| %>
+            <%= l event.start_date, :format => :short  %> - <%= l event.end_date, :format => :short  %>:
+            "<%=event.comment %>"
+            </br>
+          <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+  </table>
 
 <br />
 

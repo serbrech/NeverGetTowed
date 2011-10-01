@@ -22,7 +22,9 @@ class StreetsController < ApplicationController
   # GET /streets
   # GET /streets.json
   def index
-    @streets = Street.all
+    @streets = Street.find(:all, :order => "streetname")
+
+    # @streets = Street.all
 
     respond_to do |format|
       format.html # index.html.erb
