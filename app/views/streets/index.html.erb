@@ -3,14 +3,22 @@
   <table>
   <thead>
     <tr>
-     <th>Gate</th>
+     <th>Gatenavn</th>
+     <th>Posisjon</th>
      <th>Planlagte hendelser</th>
     </tr>
     </thead>
   <tbody>
     <% @streets.each do |street| %>
     <tr>
-      <td ><%= link_to street.streetname, street %></td>
+      <td><%= link_to street.streetname, street %></td>
+      <td>
+        <%if(street.lat) %>
+          <a href="http://maps.google.com/?ll=<%= street.lat%>,<%= street.lng%>&z=17">Kart</a>
+        <%else%>
+          <b>Mangler</b>
+        <%end%>
+      </td>
       <td>
           <% street.planned_events.each do |event| %>
             <%= l event.start_date, :format => :short  %> - <%= l event.end_date, :format => :short  %>:
