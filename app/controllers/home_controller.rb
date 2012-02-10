@@ -31,7 +31,7 @@ class HomeController < LandingController
           tel = mobil.strip
           msg = "Velkommen til NeverGetTowed! Test løsningen på http://nevergettowed.com/touch For å sjekke "
           msg = CGI.escape(msg)
-          url = "http://smsc.vianett.no/V3/CPA/MT/MT.ashx?username=tmk&password=tmk321&msgid=1234&" +
+          url = "http://smsc.vianett.no/V3/CPA/MT/MT.ashx?username=#{CONFIG['vianett']['sms_username']}&password=#{CONFIG['vianett']['sms_password']}&msgid=1234&" +
                 "tel=#{tel}&msg=#{msg}&campaignid=230170&senderaddresstype=5&senderaddress=NeverGetTowed"
           response = open(url).read
           puts response

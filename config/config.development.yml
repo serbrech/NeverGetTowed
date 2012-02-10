@@ -1,0 +1,5 @@
+defaults: &defaults
+  site_name: NeverGetTowed
+  vianett:
+    sms_username: dummy
+    sms_password: dummy
